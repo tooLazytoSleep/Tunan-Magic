@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class = "nav">
+            <div class = "logo">
+                <img src="img/logo.png">
+                <p><span>后台管理系统-</span><span id="employee">员工1</span></p>
+            </div>
+            <div class = "list">
+                <ul>
+                    <li id = "a"><img src="img/2.png"><span>招聘</span><span class="d">></span></li>
+                    <li id = "b"><img src="img/1.png"><span>案例展示</span><span class="d">></span></li>
+                    <li id = "c"><img src="img/4.png"><span>职位开放</span><span class="d">></span></li>
+                    <li id = "d"><img src="img/6.png"><span>公司团队</span><span class="d">></span></li>
+                    <li id = "i"><img src="img/8.png"><span>面试</span><span class="d">></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "content" id ="content">
+            <div class= "zhaopin" id="e">
+               <div>
+                   <iframe src="career.html" width="80%" height="1000px" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class= "anli" id="f">
+                    <iframe src="show.html" width="80%" height="1000px" scrolling="no"></iframe>
+            </div>
+            <div class= "hezuoshang" id="g">
+                    <iframe src="corporation.html" width="80%" height="1000px" scrolling="no"></iframe>
+            </div>
+            <div class="tuandui" id="h">
+                    <iframe src="group.html" width="80%" height="1000px" scrolling="no"></iframe>
+            </div>
+            <div class="mianshi" id="o">
+                    <iframe src="interview.html" width="80%" height="1000px" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script>
+        var a = document.getElementById("a");
+        var b = document.getElementById("b");
+        var c = document.getElementById("c");
+        var d = document.getElementById("d");
+        var i = document.getElementById("i");
+        var e = document.getElementById("e");
+        var f = document.getElementById("f");
+        var g = document.getElementById("g");
+        var h = document.getElementById("h");
+        var o = document.getElementById("o");
+        e.style.visibility="visible";
+        f.style.visibility="hidden";
+        g.style.visibility="hidden";
+        h.style.visibility="hidden";
+        o.style.visibility="hidden";
+        a.style.backgroundColor="#494d6d";
+        b.style.backgroundColor="#333650";
+        c.style.backgroundColor="#333650";
+        d.style.backgroundColor="#333650";
+        i.style.backgroundColor="#333650";
+        a.onclick = (function(){
+            e.style.visibility="visible";
+            f.style.visibility="hidden";
+            g.style.visibility="hidden";
+            h.style.visibility="hidden";
+            o.style.visibility="hidden";
+            a.style.backgroundColor="#494d6d";
+            b.style.backgroundColor="#333650";
+            c.style.backgroundColor="#333650";
+            d.style.backgroundColor="#333650";
+            i.style.backgroundColor="#333650";
+        });
+        b.onclick = (function(){
+            e.style.visibility="hidden";
+            f.style.visibility="visible";
+            g.style.visibility="hidden";
+            h.style.visibility="hidden";
+            o.style.visibility="hidden";
+            b.style.backgroundColor="#494d6d";
+            a.style.backgroundColor="#333650";
+            c.style.backgroundColor="#333650";
+            d.style.backgroundColor="#333650";
+            i.style.backgroundColor="#333650";
+        });
+        c.onclick = (function(){
+            e.style.visibility="hidden";
+            f.style.visibility="hidden";
+            g.style.visibility="visible";
+            h.style.visibility="hidden";
+            o.style.visibility="hidden";
+            c.style.backgroundColor="#494d6d";
+            b.style.backgroundColor="#333650";
+            a.style.backgroundColor="#333650";
+            d.style.backgroundColor="#333650";
+            i.style.backgroundColor="#333650";
+        });
+        d.onclick = (function(){
+            e.style.visibility="hidden";
+            f.style.visibility="hidden";
+            g.style.visibility="hidden";
+            h.style.visibility="visible";
+            o.style.visibility="hidden";
+            d.style.backgroundColor="#494d6d";
+            b.style.backgroundColor="#333650";
+            c.style.backgroundColor="#333650";
+            a.style.backgroundColor="#333650";
+            i.style.backgroundColor="#333650";
+        });
+        i.onclick = (function(){
+            e.style.visibility="hidden";
+            f.style.visibility="hidden";
+            g.style.visibility="hidden";
+            h.style.visibility="hidden";
+            o.style.visibility="visible";
+            d.style.backgroundColor="#333650";
+            b.style.backgroundColor="#333650";
+            c.style.backgroundColor="#333650";
+            a.style.backgroundColor="#333650";
+            i.style.backgroundColor="#494d6d";
+        });
+        
+</script>
+</html>

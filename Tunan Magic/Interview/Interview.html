@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Interview</title>
+</head>
+<body>
+        <div class = "main">
+            <div class = "header">
+                <h1>图南信息科技笔试部分</h1>
+                <div id="timer"></div>
+                <div class = "video">
+                        <video id="v" style="width: 150px;height: 150px;"></video>
+                </div>
+            </div>
+            <div class = "content">
+                <div class = "left">
+                    <h1>算法编程部分:</h1>
+                    <div class = "programming">
+                        <form action="" method="GET">
+                                <p style="font-size: 18px">给定一家公司在四十日内的股票走势信息，这些信息包括了它每天交易的最高价，最低价，以及开盘价。假定你做为交易员，必须在股票开盘时做出买入或卖出的决定，你负责设计一个算法用来决定买入和卖出的策略，使得交易获得最高的利润。
+                                </br>例：S: 10, 4, 8, 7, 9, 6, 2, 5, 3
+                                </br>因为你必须买进才能卖出，由于10排在3的前面，这意味你要10块买进，3块卖出，你的算法给出的实际上是亏损最大化的情况。
+                                </p>        
+                            </br>
+                            </br>
+                                <textarea name="codes" rows="10" cols="80" style="height: 500px; width:100%; resize: none; border:0px; background:rgba(26, 1, 37, 0.7); color:rgb(255, 255, 255); font-size: 20px; "></textarea>
+                        </form>
+                    </div>
+                </div>
+                <div class = "right">
+                    <h1>人工智能理论部分:</h1>
+                    <div class = "theory">
+                            <form action="" method="GET">
+                                    <legend style="font-size: 18px">1.	什么是人工智能，谈谈对人工和智能的理解</legend>
+                            </br>
+                                    <textarea name="first" rows="10" cols="80" style="height: 200px; width:100%; resize: none; border:1px; background:rgba(143, 140, 140, 0.5); color:rgb(0, 0, 0); font-size: 20px; "></textarea>
+                            </br></br>
+                                     <legend style="font-size: 18px">2.	您觉得未来的人工智能的趋势，以及主要的应用场景</legend>
+                            </br>
+                                    <textarea name="second" rows="10" cols="80" style="height: 200px; width:100%; resize: none; border:1px; background:rgba(143, 140, 140, 0.5); color:rgb(0, 0, 0); font-size: 20px; "></textarea>
+
+                                    <button type="submit" id="btn">提交</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+    var maxtime =  3600; //  
+              function CountDown() {
+                  if (maxtime >= 0) {
+                      minutes = Math.floor(maxtime / 60);
+                      seconds = Math.floor(maxtime % 60);
+                      msg = "距离结束还有" + minutes + "分" + seconds + "秒";
+                      document.all["timer"].innerHTML = msg;
+                      if (maxtime == 5 * 60)alert("距离结束仅剩5分钟");
+                          --maxtime;
+                  } else{
+                      clearInterval(timer);
+                      document.getElementById("btn").click();
+                      alert("时间到，结束!");
+                  }
+              }
+              timer = setInterval("CountDown()", 1000);     
+   </script>
+<script src = "js/video.js"></script>
+
+</html>

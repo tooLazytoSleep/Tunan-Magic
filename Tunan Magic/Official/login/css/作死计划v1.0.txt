@@ -1,0 +1,18 @@
+Summer 2019:
+Section A:
+5.20 - 6.29 CS 430: Introduction to Algorithms 8:50am-12:00pm MW
+5.20 - 6.29 CS 525: Advanced Database Organization 6:00pm-9:10pm TR
+Section B:
+7.01 - 8.10 CS 587: Software management 1:00pm-4:10pm MW
+
+Fall 2019:
+8.19 - 12.07 CS 422: Data Mining 6:25pm-9:05pm R
+8.19 - 12.07 CS 584: Machine Learning 6:25pm-9:05pm W
+8.19 - 12.07 CS 535: Design and Analysis of Algorithms 5:00pm-7:40pm M
+
+2020:
+CS 542：Computer Networks I:Fundamentals
+CS 512: Computer Vision
+CS 522: Advanced Data Mining
+CS 585: Natural Language Processing
+CS 535: Design and Analysis of Algorithms

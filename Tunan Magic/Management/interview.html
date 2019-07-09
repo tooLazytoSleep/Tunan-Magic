@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <div class ="zhaopin-end">
+        <div class = "zhaopin-top">
+            <div class = "ti">
+                <p>招聘人员管理中心</p>
+            </div>
+            <div class = "position">
+                <p>位置: 面试- <span>姓名</span></p>
+            </div>
+            <div class = "btn">
+                <button style="background-color:#e97900">批量删除</button>
+                <button style="background-color:#2f81e3; width:80px">添加</button>
+            </div>
+        </div>
+        <div class = "zhaopin-mid" id = "out">
+            <table id="inter">
+                <tr style="background-color: #2f81e3; color:#ffffff" >
+                    <th>姓名</th>
+                    <th>手机</th>
+                    <th>应聘职位</th>
+                    <th>分配考题</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>15222508011</td>
+                    <td>人工智能</td>
+                    <td>查看</td>
+                    <td>编辑|删除</td>
+                </tr>
+            </table>
+        </div>
+        <div class = "zhaopin-bottom">
+            
+        </div>
+    </div>
+</body>
+<script>
+    //AJAX传数据方法
+    window.onload(function requestData(){
+            $.ajax({
+                url: "要访问的地址",
+                type: "post",
+                dataType: "json",
+                success: function(data){
+                    showData(data);
+                },
+                error: function(msg){
+                    alert("ajax连接异常："+msg);
+                }
+            });
+        });
+    //人才招聘部分展示数据方法
+    function showData(data) {
+            var str = "";
+            str = "<tr style='background-color: #2f81e3; color:#ffffff' >"
+                    +"<th>姓名</th>"+
+                    "<th>手机</th>"+
+                    "<th>应聘职位</th>"+
+                    "<th>分配考题</th>"+
+                    "<th>操作</th>"+
+                    "</tr>";
+            $("#inter").append(str);
+            for(var i=0;i<data.length; i++)
+                str = "<tr><td>"+data.name+"</td"+data.phone+"<td>"+data.position+"</td>"+"<td id='test'><a href='#'>"+data.test+"</a></td>"+"<td>"+"<a href='#'>编辑</a>"+"|"+"<a href='#'>删除</a>"+"</td></tr>"
+            $("#inter").append(str);
+
+    }
+    
+    </script>
+</html>

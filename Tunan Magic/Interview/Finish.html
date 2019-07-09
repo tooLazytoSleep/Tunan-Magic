@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Interview</title>
+</head>
+<body>
+        <div class = "finish_main">
+            <div class = "finish_nav">
+            </div>
+
+            <div class = "finish_body">
+                <h1>
+                    笔试部分已结束，请等待电话通知结果。
+                </h1>
+                <div class = "auto">
+                    <span id = "second">5</span>
+                    <span>后自动返回主页面</span>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    var int=setInterval("clock()", 1000);
+    var num=5;
+    function clock(){
+        num>0 ? num-- : clearInterval(int);
+        document.getElementById("second").innerHTML=num;
+        setTimeout("javascript:location.href='interview.html'", 5000); 
+    }
+</script>
+</html>
